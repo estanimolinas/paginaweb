@@ -1,0 +1,437 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Base Styles */
+:root {
+  --color-primary: #0a0a0a; /* Almost black */
+  --color-secondary: #1a1a1a; /* Darker gray */
+  --color-accent: #c1272d; /* Deep red, Telefonorojo brand color */
+  --color-text-primary: #f0f0f0; /* Off-white for primary text */
+  --color-text-secondary: #b0b0b0; /* Muted gray for secondary text */
+  --color-border: #333333;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Open Sans', sans-serif;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed) ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(193, 39, 45, 0.1);
+  color: var(--color-accent);
+}
+
+/* Hero Section Styles */
+.hero {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: var(--box-shadow);
+  background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-primary);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent);
+  padding: 8px;
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 35px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: white;
+  padding: 14px 30px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #a51e24; /* Slightly darker red on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* About Section Styles */
+#about {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: var(--box-shadow);
+}
+
+#about h2 {
+  margin-top: 0;
+}
+
+#about p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+#about strong {
+  color: var(--color-accent);
+}
+
+/* Main Content Styles */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Video Section Styles */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.video {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.video:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border-color: var(--color-accent);
+}
+
+.video img {
+  width: 100%;
+  display: block;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.video .title {
+  padding: 20px 20px 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+}
+
+.video .description {
+  padding: 0 20px 20px;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.video-actions {
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+}
+
+.video-button:hover {
+  background-color: #a51e24; /* Slightly darker red on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--color-secondary);
+  border-top: 1px solid var(--color-border);
+  padding: 30px 5%;
+  margin-top: 50px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.footer-graphic {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .header-content {
+    padding: 12px 0;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .video-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  main {
+    margin: 35px auto;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  .video-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 20px;
+  }
+
+  main {
+    margin: 25px auto;
+    padding: 0 15px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  #about {
+    padding: 25px 20px;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 25px 5%;
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    font-size: 0.9rem;
+  }
+}
