@@ -6,7 +6,7 @@ Create a new repository on GitHub at https://github.com/new with the name "pagin
 ## Step 2: Connect Local Repository to GitHub
 After creating the repository, run these commands in your terminal:
 
-git remote add origin https://github.com/YOUR_USERNAME_OR_ORG/paginaweb.git
+git remote add origin https://github.com/estanimolinas/paginaweb.git
 git branch -M main
 git push -u origin main
 
